@@ -1,0 +1,74 @@
+{
+  "input_sha256": "ac83e195a2ac09af80e5c98f44de6921eb9a70fb65c4de6241b32a3247a5008b",
+  "data": "original historical revised US observations",
+  "results": [
+    {
+      "split": {
+        "horizon_quarters": 1,
+        "train_rows": 116,
+        "test_rows": 19,
+        "train_last_target": "2019Q4",
+        "test_first_origin": "2020Q1",
+        "test_first_target": "2020Q2",
+        "test_last_target": "2024Q4",
+        "ridge_alpha": 100.0
+      },
+      "scores": [
+        {
+          "model": "Last observed growth",
+          "RMSE": 3.86994850381651,
+          "MAE": 2.1606755437768044
+        },
+        {
+          "model": "Training mean",
+          "RMSE": 2.5961054344899526,
+          "MAE": 1.1872052631029248
+        },
+        {
+          "model": "Ridge",
+          "RMSE": 2.6713392681347488,
+          "MAE": 1.2108717357480328
+        },
+        {
+          "model": "Random forest",
+          "RMSE": 2.702223589703302,
+          "MAE": 1.2496824206258481
+        }
+      ]
+    },
+    {
+      "split": {
+        "horizon_quarters": 4,
+        "train_rows": 113,
+        "test_rows": 16,
+        "train_last_target": "2019Q4",
+        "test_first_origin": "2020Q1",
+        "test_first_target": "2021Q1",
+        "test_last_target": "2024Q4",
+        "ridge_alpha": 100.0
+      },
+      "scores": [
+        {
+          "model": "Last observed growth",
+          "RMSE": 2.8492439604359543,
+          "MAE": 1.671834407163951
+        },
+        {
+          "model": "Training mean",
+          "RMSE": 0.5303111575082009,
+          "MAE": 0.39801930687712817
+        },
+        {
+          "model": "Ridge",
+          "RMSE": 0.7239670149559213,
+          "MAE": 0.5152943213516754
+        },
+        {
+          "model": "Random forest",
+          "RMSE": 0.5802673308272321,
+          "MAE": 0.44472744251282315
+        }
+      ]
+    }
+  ]
+}
