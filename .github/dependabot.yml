@@ -2,6 +2,10 @@ version: 2
 updates:
   - package-ecosystem: pip
     directory: /
+    # NumPy 2.5+ requires Python 3.12; this project targets Python 3.11.
+    ignore:
+      - dependency-name: numpy
+        versions: [">=2.5"]
     schedule:
       interval: monthly
   - package-ecosystem: github-actions
